@@ -205,7 +205,7 @@
             color: var(--accent);
         }
 
-        /* Order Section (Customer Activity) */
+        /* Customer Activity & Store Section Style */
         .order-section {
             background-color: var(--primary);
             color: white;
@@ -222,10 +222,47 @@
             font-weight: 600;
         }
 
-        .order-section p {
+        .order-section > p {
             font-size: 1rem;
             color: #E2ECE9;
             margin-bottom: 1.8rem;
+            font-weight: 300;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(5px);
+            padding: 1.5rem 1rem;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.4rem;
+            color: #FFFFFF;
+        }
+
+        .contact-card p {
+            font-size: 0.85rem;
+            color: #E2ECE9;
+            margin-bottom: 1rem;
             font-weight: 300;
         }
 
@@ -233,10 +270,10 @@
             display: inline-block;
             background-color: #06C755;
             color: white;
-            padding: 0.9rem 2.2rem;
+            padding: 0.6rem 1.4rem;
             text-decoration: none;
             font-weight: 500;
-            font-size: 1.05rem;
+            font-size: 0.95rem;
             border-radius: 50px;
             box-shadow: 0 4px 15px rgba(6, 199, 85, 0.3);
             transition: all 0.3s ease;
@@ -245,6 +282,29 @@
         .btn-line:hover {
             background-color: #05b34c;
             transform: scale(1.03);
+        }
+
+        .btn-map, .btn-phone {
+            display: inline-block;
+            background-color: #FFFFFF;
+            color: var(--primary);
+            padding: 0.6rem 1.4rem;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-map:hover, .btn-phone:hover {
+            background-color: var(--bg-body);
+            transform: scale(1.03);
+        }
+
+        .map-container {
+            width: 100%;
+            max-width: 850px;
+            margin: 2rem auto 0 auto;
         }
 
         footer {
@@ -267,7 +327,7 @@
         </div>
     </header>
 
-    <!-- 1. Value Proposition (ข้อกำหนดข้อ 1) -->
+    <!-- 1. Value Proposition -->
     <section class="hero">
         <p class="value-prop">
             <span class="value-highlight">ข้าวกล่องคลีนออร์แกนิกเพื่อสุขภาพ</span> คำนวณแคลอรีพร้อมทาน วัตถุดิบสดใหม่ไม่ใช้น้ำมันและสารกันบูด ส่งตรงถึงออฟฟิศและบ้านคุณทุกเช้า
@@ -276,7 +336,7 @@
 
     <div class="container">
 
-        <!-- 2. Catalog (ข้อกำหนดข้อ 2 - รวม 15 เมนู) -->
+        <!-- 2. Catalog (15 เมนู) -->
 
         <!-- หมวดที่ 1: Main Course (5 เมนู) -->
         <h2 class="section-title">🍱 อาหารจานหลัก (Main Courses)</h2>
@@ -534,12 +594,49 @@
             </div>
         </div>
 
-        <!-- 3. Customer Activity Section (ข้อกำหนดข้อ 3) -->
-        <div class="order-section">
-            <h2>สั่งซื้อ หรือ สมัครคอร์สปิ่นโตรายสัปดาห์</h2>
-            <p>สั่งอาหารล่วงหน้า 1 วัน หรือปรึกษาโภชนาการกับแอดมินได้ฟรีผ่าน LINE OA</p>
-            <a href="https://line.me" target="_blank" class="btn-line">💬 สั่งซื้อผ่าน LINE OA</a>
-        </div>
+        <!-- 3. Customer Activity & Store Location (3 ช่องทาง) -->
+        <section class="order-section">
+            <h2>ติดต่อสั่งซื้อ & แวะมาทานที่หน้าร้าน</h2>
+            <p>เลือกช่องทางที่คุณสะดวก ทั้งสั่งออนไลน์ จัดส่งถึงบ้าน หรือแวะมาทานที่สาขา</p>
+
+            <div class="contact-grid">
+                <!-- ช่องทางที่ 1: LINE OA -->
+                <div class="contact-card">
+                    <div class="contact-icon">💬</div>
+                    <h3>สั่งซื้อออนไลน์</h3>
+                    <p>สั่งอาหารล่วงหน้า 1 วัน หรือปรึกษาโภชนาการฟรี</p>
+                    <a href="https://line.me" target="_blank" class="btn-line">แอด LINE OA</a>
+                </div>
+
+                <!-- ช่องทางที่ 2: หน้าร้าน & Google Maps -->
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h3>พิกัดหน้าร้าน</h3>
+                    <p>โครงการ Nimman One เชียงใหม่<br>เปิดทุกวัน: 07:30 - 20:00 น.</p>
+                    <a href="https://maps.google.com" target="_blank" class="btn-map">ดูแผนที่ Google Maps</a>
+                </div>
+
+                <!-- ช่องทางที่ 3: เบอร์โทรสั่งซื้อ -->
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h3>สอบถามคอร์สปิ่นโต</h3>
+                    <p>สอบถามรายละเอียดคอร์สอาหารรายสัปดาห์/เดือน</p>
+                    <a href="tel:0812345678" class="btn-phone">โทร 081-234-5678</a>
+                </div>
+            </div>
+
+            <!-- ฝัง Google Maps หน้าร้าน -->
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.202353112444!2d98.9654!3d18.7961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDQ3JzQ2LjAiTiA5OMKwNTcnNTUuNCJF!5e0!3m2!1sth!2sth!4v1620000000000!5m2!1sth!2sth" 
+                    width="100%" 
+                    height="240" 
+                    style="border:0; border-radius: 14px;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </section>
 
     </div>
 
