@@ -1,5 +1,178 @@
-<html>
-  <body>
-    <h1> Hello, I am a CMUBS student.</h1>
-  </body>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CleanBites - ข้าวกล่องคลีนเพื่อสุขภาพ</title>
+    <style>
+        :root {
+            --primary: #2E7D32;
+            --secondary: #81C784;
+            --bg: #F1F8E9;
+            --text: #333333;
+            --white: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #FAFAFA;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* 1. Header & Value Proposition */
+        header {
+            background-color: var(--primary);
+            color: var(--white);
+            text-align: center;
+            padding: 2.5rem 1rem;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .value-prop {
+            font-size: 1rem;
+            color: #E8F5E9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        h2 {
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        /* 2. Catalog */
+        .catalog {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .product-card {
+            background: var(--white);
+            border: 1px solid #E0E0E0;
+            border-radius: 8px;
+            padding: 1.2rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .product-desc {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .product-price {
+            color: #D32F2F;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+        }
+
+        /* 3. Customer Activity */
+        .contact-section {
+            background: var(--bg);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2.5rem;
+            text-align: center;
+        }
+
+        .btn-order {
+            display: inline-block;
+            background-color: #06C755;
+            color: white;
+            padding: 0.8rem 1.8rem;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 25px;
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.85rem;
+            color: #777;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ข้อกำหนดข้อ 1: ชื่อกิจการและ Value Proposition 1 ประโยค -->
+    <header>
+        <h1>CleanBites</h1>
+        <p class="value-prop">ข้าวกล่องคลีนเพื่อสุขภาพ คำนวณแคลอรีพร้อมทาน อร่อย ไม่ปรุงแต่งสารกันบูด ส่งตรงถึงออฟฟิศคุณทุกเช้า</p>
+    </header>
+
+    <div class="container">
+        <!-- ข้อกำหนดข้อ 2: แคตตาล็อกสินค้าและราคา -->
+        <h2>เมนูประจำสัปดาห์</h2>
+        <div class="catalog">
+            <div class="product-card">
+                <div>
+                    <div class="product-title">อกไก่ย่างเทริยากิ + ข้าวไรซ์เบอร์รี</div>
+                    <p class="product-desc">อกไก่นุ่ม ซอสเทริยากิโซเดียมต่ำ พร้อมผักนึ่ง (350 kcal)</p>
+                </div>
+                <div class="product-price">79 บาท</div>
+            </div>
+
+            <div class="product-card">
+                <div>
+                    <div class="product-title">สเต๊กแซลมอนย่างเกลือ</div>
+                    <p class="product-desc">แซลมอนนอร์เวย์ย่าง เสิร์ฟพร้อมมันนึ่งและบรอกโคลี (420 kcal)</p>
+                </div>
+                <div class="product-price">129 บาท</div>
+            </div>
+
+            <div class="product-card">
+                <div>
+                    <div class="product-title">สลัดเต้าหู้ทอดหม้อทอดไร้น้ำมัน</div>
+                    <p class="product-desc">เต้าหู้ญี่ปุ่น ผักสลัดออร์แกนิก น้ำสลัดงาญี่ปุ่นงาคั่ว (280 kcal)</p>
+                </div>
+                <div class="product-price">69 บาท</div>
+            </div>
+        </div>
+
+        <!-- ข้อกำหนดข้อ 3: กิจกรรมของลูกค้า (ช่องทางสั่งซื้อ/ติดต่อ) -->
+        <div class="contact-section">
+            <h2>สั่งซื้อหรือสมัครคอร์สรายสัปดาห์</h2>
+            <p>สั่งอาหารล่วงหน้า 1 วัน หรือสอบถามเมนูประจำวันได้ที่ LINE Official Account</p>
+            <a href="https://line.me" target="_blank" class="btn-order">สั่งซื้อผ่าน LINE OA</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 CleanBites - 703311 Information Systems for Business</p>
+    </footer>
+
+</body>
 </html>
